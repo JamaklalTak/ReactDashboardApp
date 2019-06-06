@@ -1,0 +1,27 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+@import './global-header.css';
+@import './dashboard.css';
+@import './global-footer.css';
+
+
+.fs-10 {
+    font-size: 10px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.border-solid-black {
+    border: solid 1px #0c0c0c;
+}
+.h-200 {
+    height: 200px;
+}

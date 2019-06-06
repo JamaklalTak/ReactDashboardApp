@@ -1,57 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-`;
+import GlobalHeader from './GlobalHeader';
+import Dashboard from './Dashboard';
+import GlobalFooter from './GlobalFooter';
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 500px;
-    height: 40%;
-`;
-
-const Title = styled.h1`
-    color: black;
-    font-size: 2.5rem;
-    font-weight: 700;
-`;
-
-const Paragraph = styled.p`
-    color: black;
-    font-size: 1rem;
-`;
-
-const Link = styled.a`
-    color: #00a8e8;
-`;
+import './../css';
 
 const App = () => (
-    <Container>
-        <Wrapper>
-            <Title>
-                <span role="img" aria-label="Bolt">
-                    ⚡
-                </span>{' '}
-                React Bolt
-            </Title>
-            <Paragraph>The most simple and robust React boilerplate.</Paragraph>
-            <Paragraph>
-                Read the article{' '}
-                <Link href="https://medium.freecodecamp.org/a-complete-react-boilerplate-tutorial-from-zero-to-hero-20023e086c4a" target="_blank">
-                    here.
-                </Link>
-            </Paragraph>
-        </Wrapper>
-    </Container>
+  <React.Fragment>
+    <GlobalHeader />
+    <Dashboard />
+    <GlobalFooter />
+  </React.Fragment>
 );
 
 export default App;

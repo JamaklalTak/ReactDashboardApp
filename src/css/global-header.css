@@ -1,0 +1,24 @@
+
+.app-title {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.app-header {
+    background: #6d6767;
+    height: 60px;
+    margin: 30px;
+}
+.profile-name {
+    top: 10px;
+    font-size: 25px;
+}
+.user-name {
+    color: #ffffff;
+    font-weight: 500;
+}
+.btn-logout {
+    top:    15px;
+    text-align: right;
+}
