@@ -6,6 +6,7 @@ import Loadable from 'react-loadable';
 /* Code Splitting with help of react-loadable*/
 function Loading({ error }) {
   if (error) {
+    console.log(error);
     return 'Oh nooess!';
   } else {
     return <h3>Loading...</h3>;
@@ -24,15 +25,14 @@ const EditDashboard = Loadable({
   loader : () => import('./Pages/EditDashboard'),
   loading : Loading
 })
-const username= 'Jamak99';
 
 const MainRoutes = (store) => (
   <>
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path={'/'+username} component={Dashboard}/>
+      <Route path='/Dashboard' component={Dashboard}/>
       <Route path='/Login' component={Login}/>
-      <Route path={'/Edit'} component={EditDashboard}/>
+      <Route path='/Edit' component={EditDashboard}/>
     </Switch>
   </>
 )

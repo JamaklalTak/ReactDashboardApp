@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Image from './../../helper/Image';
-import imagePath from './../../Assets/Images/mountains.jpg';
 
 class LeftPanel extends Component {
     render() {
@@ -12,7 +11,7 @@ class LeftPanel extends Component {
                 <div className="row border-solid-black mr-10 profile-box">
                     <div className="user-profile-image">
                         <Image
-                            src={imagePath}
+                            src={require('./../../Assets/Images/'+userData.profilePhoto)}
                             alt="user-profile-picture"
                             className="profile-picture"
                             id="userProfilePicture"
@@ -29,7 +28,7 @@ class LeftPanel extends Component {
                 <div className="row border-solid-black mr-10 mt-15 h-200">
                     <ul className="options-list">
                         <li>My Posts</li>
-                        <li><Link to='/Edit'>Account Settings</Link></li>
+                        <li><Link to="/Edit">Account Settings</Link></li>
                     </ul>
                 </div>
             </React.Fragment>
