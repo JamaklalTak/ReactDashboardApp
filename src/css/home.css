@@ -1,0 +1,12 @@
+.app-name {
+    font-size: 60px;
+    font-family: fantasy;
+    color: #f33357;
+}
+.app-message {
+    font-family: fantasy;
+}
+.login-btn {
+    width: 50%;
+    margin-top: 15%;
+}

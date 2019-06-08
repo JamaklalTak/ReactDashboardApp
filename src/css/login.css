@@ -1,0 +1,23 @@
+.login-box {
+    text-align: center;
+    width: 50%;
+}
+.credential-box {
+    border: solid 1px #0c0c0c;
+    padding: 20px;
+}
+.login-user {
+    width: 25%;
+}
+.rememberme-text {
+    margin: 5px;
+}
+.userfullname, .user-password {
+    width: 50%;
+}
+.rememberme-check {
+    padding-right: 165px;
+}
+.login-user {
+    width: 25%;
+}
