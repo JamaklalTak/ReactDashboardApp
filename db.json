@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 99,
+      "fullName": "Jamak Lal Tak",
+      "userName": "Jamak99",
+      "password": "jamak123",
+      "userStatus": "Active",
+      "profilePhoto": "mountains.jpg"
+    },
+    {
+      "id": 1,
+      "fullName": "Anurag Kurmi",
+      "userName": "Anurag001",
+      "password": "anurag123",
+      "userStatus": "Active",
+      "profilePhoto": "cat-social-app.jpg"
+    },
+    {
+      "id": 2,
+      "fullName": "Neha Dhakad",
+      "userName": "Neha002",
+      "password": "neha123",
+      "userStatus": "Active",
+      "profilePhoto": "socialAppLogo.png"
+    }
+  ]
+}

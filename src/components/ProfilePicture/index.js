@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 import Image from './../../helper/Image';
-import appLogo from './../../Images/socialAppLogo.png';
+import appLogo from './../../Assets/Images/socialAppLogo.png';
 
 class ProfilePicture extends Component {
     render() {
+        const { userConnectionData } = this.props;
         return (
             <div className="col-md-4 mt-15">
                 <div className="connection-status">
@@ -16,7 +17,7 @@ class ProfilePicture extends Component {
                     className="user-connection-profile"
                     id=""
                 />
-                <div className="fs-10">Jamak Lal Tak</div>
+                <div className="fs-10">{userConnectionData.fullName}</div>
             </div>
         );
     }

@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
 
+import userConnectionsData from './../Pages/Dashboard/reducer';
+import userDetail from './../Pages/Login/reducer';
+
 const rootReducer = combineReducers({
-    state: () => ({})
+    userConnectionsData,
+    userDetail
 });
 
 export default rootReducer;

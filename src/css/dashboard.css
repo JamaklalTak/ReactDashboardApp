@@ -5,6 +5,9 @@
     margin: 10px;
     width:  20%;
 }
+.profile-box {
+    padding: 5px;
+}
 .middle-container {
     background-color: #9da3a9;
     text-align: center;
@@ -23,6 +26,7 @@
     margin-right: auto;
     width: 50%;
     border-radius: 40%;
+    height: 100px;
 }
 .user-fullname {
     margin: auto;

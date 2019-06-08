@@ -1,0 +1,5 @@
+{
+    "/data/*": "/$1",
+    "/data/:id": "/data?id=:id",
+    "/data/:username/:password": "/data?username=:username&password=:password"
+}
