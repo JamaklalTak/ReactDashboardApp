@@ -5,15 +5,16 @@ const ServiceUtil = {
         const method = options.method.toUpperCase();
         const url = options.url;
         if (method.toUpperCase() === 'GET') {
-            const myData = await this.doAjax(url,undefined).then(p=>p.data)
-            console.log("pppppp ==> " + myData);
-            return myData;
-        }
-    },
+            return axios.get(url)
+                .then((response) => {
+                    return response.data
+                })
+                .catch(function (error) {
 
-    doAjax(URL,pauLoad){
-        return axios.get(URL)
-        
+                    return error.response.data;
+
+                });
+        }
     }
 };
 

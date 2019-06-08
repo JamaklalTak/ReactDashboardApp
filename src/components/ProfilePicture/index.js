@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Image from './../../helper/Image';
-import appLogo from './../../Assets/Images/socialAppLogo.png';
 
 class ProfilePicture extends Component {
     render() {
@@ -12,7 +11,7 @@ class ProfilePicture extends Component {
                     <span className="status-dot"></span>
                 </div>
                 <Image
-                    src={appLogo}
+                    src={require('./../../Assets/Images/'+userConnectionData.profilePhoto)}
                     alt="user-profile-picture"
                     className="user-connection-profile"
                     id=""
