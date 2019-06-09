@@ -16,3 +16,9 @@ To run this application on your local please follow below steps
 5. start new command propmt run:
 ### `npm start`
 
+
+6. Routes to watch
+> Login: "/Login"
+> Dashboard: "/Dashboard"
+> Edit: "Edit"
+
