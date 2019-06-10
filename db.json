@@ -6,7 +6,116 @@
       "userName": "Jamak99",
       "password": "jamak123",
       "userStatus": "Active",
-      "profilePhoto": "mountains.jpg"
+      "profilePhoto": "mountains.jpg",
+      "userPosts": [
+        {
+          "message": "This is testing message",
+          "messageTitle": "Title"
+        },
+        {
+          "message": "This is testing message",
+          "messageTitle": "Title"
+        },
+        {
+          "message": "This is testing message",
+          "messageTitle": "Title"
+        },
+        {
+          "message": "This is testing message",
+          "messageTitle": "Title"
+        }],
+      "connections": [
+      {
+        "profileId": 1,
+        "fullName": "Anurag Kurmi",
+        "userName": "Anurag001",
+        "userStatus": "Active",
+        "profilePhoto": "cat-social-app.jpg",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 2,
+        "fullName": "Neha Dhakad",
+        "userName": "Neha002",
+        "userStatus": "Active",
+        "profilePhoto": "socialAppLogo.png",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 3,
+        "fullName": "Rahul Khare",
+        "userName": "Rahul003",
+        "userStatus": "Active",
+        "profilePhoto": "girl-social-app.jpg",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 4,
+        "fullName": "Chandani Singh",
+        "userName": "Chandani04",
+        "userStatus": "Active",
+        "profilePhoto": "cat-social-app.jpg",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 5,
+        "fullName": "Gurusha Shri",
+        "userName": "Gurusha05",
+        "userStatus": "Active",
+        "profilePhoto": "socialAppLogo.png",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 6,
+        "fullName": "Neha Himthani",
+        "userName": "Neha06",
+        "userStatus": "Active",
+        "profilePhoto": "socialAppLogo.png",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 7,
+        "fullName": "Raj Kapoor",
+        "userName": "Raj07",
+        "userStatus": "Active",
+        "profilePhoto": "cat-social-app.jpg",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 8,
+        "fullName": "Chandan Parulkar",
+        "userName": "Chandan08",
+        "userStatus": "Active",
+        "profilePhoto": "girl-social-app.jpg",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 9,
+        "fullName": "Rupal Agrawal",
+        "userName": "Rupal09",
+        "userStatus": "Active",
+        "profilePhoto": "socialAppLogo.png",
+        "message": "This message is just for testing the paragraph width and also the css.",
+        "messageTitle": "Testing"
+      },
+      {
+        "profileId": 10,
+        "fullName": "Sonakshi Sinha",
+        "userName": "Sonakshi10",
+        "userStatus": "Active",
+        "profilePhoto": "girl-social-app.jpg",
+        "message": "This message is posted by Sonakshi Sinha.",
+        "messageTitle": "Testing"
+      }
+      ]
     },
     {
       "id": 1,

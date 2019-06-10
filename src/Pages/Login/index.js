@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import Input from './../../helper/Input';
 import Button from './../../helper/Button';
 
-import { getUserLoggedIn } from './action';
+import { fetchUserDetail } from './action';
 
 class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.handleUserLogin = this.handleUserLogin.bind(this);
 	}
-	handleUserLogin = () => {
+	handleUserLogin = async () => {
 		const userName = document.getElementById('username').value;
 		const userPassword = document.getElementById('userPassword').value;
-		const response = this.props.callLoginService(userName, userPassword);
+		const response = await this.props.callLoginService(userName, userPassword);
+		if (this.props.userLoginDetail && this.props.userLoginDetail[0].id && this.props.userLoginDetail[0].userName){
+			this.props.history.push({pathname: `/${this.props.userLoginDetail[0].userName}`});
+		}
 	}
 	render() {
 		return (
@@ -77,7 +81,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    callLoginService: (a,b)=> dispatch(getUserLoggedIn(a,b))
+    callLoginService: (a,b)=> dispatch(fetchUserDetail(a,b))
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

@@ -28,9 +28,10 @@ const EditDashboard = Loadable({
 
 const MainRoutes = (store) => (
   <>
+  {console.log('coming after login click', `/${store.store.userName}/Edit`)}
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='/Dashboard' component={Dashboard}/>
+      <Route path={`/${store.store.userName}`} component={Dashboard}/>
       <Route path='/Login' component={Login}/>
       <Route path='/Edit' component={EditDashboard}/>
     </Switch>
