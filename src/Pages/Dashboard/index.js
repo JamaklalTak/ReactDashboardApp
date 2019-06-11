@@ -6,27 +6,26 @@ import MessageContainer from './../../components/MessageContainer';
 import RightPanel from './../../components/RightPanel';
 import LeftPanel from './../../components/LeftPanel';
 
-import { getUserAllConnectionData } from './action';
+// import { getUserAllConnectionData } from './action';
 
 class GlobalHeader extends Component {
   constructor(props){
     super(props);
-    this.UsersData = '';
+    this.UsersConnectionsData = '';
     this.state = {
       userConnectionsMessages: []
     }
     this.handalePhraseSearchButtonClick = this.handalePhraseSearchButtonClick.bind(this);
   }
   componentWillMount = () => {
-    const data = this.props.getUserConnectionsData();
-    this.UsersData = data.payload;
+    this.UsersConnectionsData = this.props.userAllData && this.props.userAllData[0] ? this.props.userAllData[0] : '';
     this.setState({
-      userConnectionsMessages: this.UsersData.connections
+      userConnectionsMessages: this.UsersConnectionsData.connections
     });
   }
   handalePhraseSearchButtonClick = () => {
     const enteredValue = document.getElementById('search-phrase').value;
-    const filteredData = this.UsersData.connections.filter((data)=> {
+    const filteredData = this.UsersConnectionsData.connections.filter((data)=> {
       if(data.message.toLowerCase().includes(enteredValue.toLowerCase())){
         return data;
       }
@@ -40,7 +39,7 @@ class GlobalHeader extends Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-3">
-            <LeftPanel userData={this.UsersData}/>
+            <LeftPanel userData={this.UsersConnectionsData}/>
           </div>
           <div className="col-sm-6 middle-container">
             <SearchBox
@@ -60,7 +59,7 @@ class GlobalHeader extends Component {
             })}
           </div>
           <div className="col-sm-3 right-container">
-            <RightPanel userConnectionData={this.UsersData}/>
+            <RightPanel userConnectionData={this.UsersConnectionsData}/>
           </div>
         </div>
       </div>
@@ -70,12 +69,12 @@ class GlobalHeader extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    userAllData: state.userConnectionsData.data
+    userAllData: state.userDetail.data
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    getUserConnectionsData: ()=> dispatch(getUserAllConnectionData())
+    // getUserConnectionsData: ()=> dispatch(getUserAllConnectionData())
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(GlobalHeader);

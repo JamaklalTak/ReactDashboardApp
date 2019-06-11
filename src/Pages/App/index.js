@@ -7,12 +7,14 @@ import GlobalFooter from '../../components/GlobalFooter';
 import './../../css';
 
 class App extends React.Component {
+  
   render() {
     const { userAllData } = this.props;
+    const userDetail = userAllData && userAllData[0] && userAllData[0].userName ? userAllData[0] : '';
     return (
       <React.Fragment>
         <GlobalHeader userData={userAllData}/>
-        <MainRoutes store={userAllData}/>
+        <MainRoutes store={userDetail}/>
         <GlobalFooter />
       </React.Fragment>
     );
@@ -21,7 +23,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    userAllData: state.userConnectionsData.data
+    userAllData: state.userDetail.data
   }
 }
 const mapDispatchToProps = (dispatch) => {

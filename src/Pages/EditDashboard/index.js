@@ -5,12 +5,15 @@ import Input from './../../helper/Input';
 import Button from './../../helper/Button';
 import Select from './../../helper/Select';
 
+import { updateUserDetail } from './action';
+
 class EditDashboard extends Component {
     constructor(props){
         super(props);
         this.handleFullNameChange = this.handleFullNameChange.bind(this);
         this.handleUserNameChange = this.handleUserNameChange.bind(this);
         this.handleUserStatusChange = this.handleUserStatusChange.bind(this);
+        this.updateUserDetail = this.updateUserDetail.bind(this);
         this.state=({
             fullname: '',
             username: '',
@@ -41,6 +44,14 @@ class EditDashboard extends Component {
         this.setState({
             status: changedValue
         });
+    }
+    updateUserDetail = () => {
+        const options = {
+            fullName: this.state.fullname,
+            userName: this.state.username,
+            userStatus: this.state.status
+        }
+        this.props.callUpdateUSer(this.props.userAllData.id, options);
     }
     render() {
         const { userAllData } = this.props;
@@ -86,20 +97,14 @@ class EditDashboard extends Component {
                         />
                     </div>
                     <div className="row">
-                        <span className="col-md-2"></span>
+                        <span className="col-md-4"></span>
                         <Button
                             id="updateUser"
                             className="col-md-4 update-user-detail"
                             name="updateuser"
                             type="button"
                             value="Update"
-                        />
-                        <Button
-                            id="resetUser"
-                            className="col-md-4 reset-user-detail ml-10"
-                            name="resetuser"
-                            type="button"
-                            value="Reset"
+                            onClick={this.updateUserDetail}
                         />
                     </div>
                 </div>
@@ -110,11 +115,13 @@ class EditDashboard extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      userAllData: state.userConnectionsData.data
+      userAllData: state.userDetail.data[0]
     }
   }
   const mapDispatchToProps = (dispatch) => {
-    return {}
+    return {
+        callUpdateUSer: (id, detail) => dispatch(updateUserDetail(id, detail))
+    }
   }
   export default connect(mapStateToProps, mapDispatchToProps)(EditDashboard);
 // export default EditDashboard;
