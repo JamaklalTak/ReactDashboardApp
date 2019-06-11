@@ -19,5 +19,6 @@ To run this application on your local please follow below steps
 
 6. Routes to watch
 > Login: "/Login"
-> Dashboard: "/Dashboard"
+> Dashboard: "/{userName}"
 > Edit: "Edit"
+
