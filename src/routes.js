@@ -6,8 +6,10 @@ import Loadable from 'react-loadable';
 /* Code Splitting with help of react-loadable*/
 function Loading({ error }) {
   if (error) {
-    console.log(error);
-    return 'Oh nooess!';
+    return (<div>
+      <span>Ohhh So Sorryyyyyy!!!!</span>
+      <span>We got an error: {error}</span>
+    </div>);
   } else {
     return <h3>Loading...</h3>;
   }
@@ -28,7 +30,6 @@ const EditDashboard = Loadable({
 
 const MainRoutes = (store) => (
   <>
-  {console.log('coming after login click', `/${store.store.userName}/Edit`)}
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path={`/${store.store.userName}`} component={Dashboard}/>

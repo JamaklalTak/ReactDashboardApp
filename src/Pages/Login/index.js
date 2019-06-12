@@ -15,9 +15,13 @@ class Login extends Component {
 	handleUserLogin = async () => {
 		const userName = document.getElementById('username').value;
 		const userPassword = document.getElementById('userPassword').value;
-		const response = await this.props.callLoginService(userName, userPassword);
-		if (this.props.userLoginDetail && this.props.userLoginDetail[0].id && this.props.userLoginDetail[0].userName){
-			this.props.history.push({pathname: `/${this.props.userLoginDetail[0].userName}`});
+		if (userName && userPassword && userName != null && userPassword != null) {
+			const response = await this.props.callLoginService(userName, userPassword);
+			if (this.props.userLoginDetail && this.props.userLoginDetail[0].id && this.props.userLoginDetail[0].userName) {
+				this.props.history.push({ pathname: `/${this.props.userLoginDetail[0].userName}` });
+			}
+		} else {
+			alert("Please Enter The Credentials");
 		}
 	}
 	render() {
@@ -75,13 +79,13 @@ class Login extends Component {
 
 
 const mapStateToProps = (state) => {
-  return {
-    userLoginDetail: state.userDetail.data
-  }
+	return {
+		userLoginDetail: state.userDetail.data
+	}
 }
 const mapDispatchToProps = (dispatch) => {
-  return {
-    callLoginService: (a,b)=> dispatch(fetchUserDetail(a,b))
-  }
+	return {
+		callLoginService: (a, b) => dispatch(fetchUserDetail(a, b))
+	}
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

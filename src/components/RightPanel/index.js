@@ -46,7 +46,9 @@ class RightPanel extends Component {
                 <h6>My Connections</h6>
                 <div className="row border-solid-black ml-10">
                     {this.state.userConnectionsProfiles.map((data, index)=>{
-                    return <ProfilePicture key={index} userConnectionData={data}/>
+                      if(index < 12){
+                        return <ProfilePicture key={index} userConnectionData={data}/>
+                      }
                     })}
                 </div>
             </React.Fragment>

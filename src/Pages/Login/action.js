@@ -9,9 +9,9 @@ export function getUserLoggedIn(data) {
     };
 }
 
-export function fetchUserDetail() {
+export function fetchUserDetail(username, password) {
     return (dispatch) => {
-        return axios.get("http://localhost:3000/data?username=Jamak99&password=jamak123")
+        return axios.get(`http://localhost:3000/data?username=${username}&password=${password}`)
             .then((json) => {
                 dispatch(getUserLoggedIn(json.data));
             });
