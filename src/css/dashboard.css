@@ -66,3 +66,11 @@ h6{
     padding-left: 50px;
     position: absolute;
 }
+.spinner {
+    margin-left: 50%;
+    margin-top: 10px;
+}
+.message-container-part {
+    height: 350px;
+    overflow: scroll;
+}
