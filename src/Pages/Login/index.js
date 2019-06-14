@@ -11,6 +11,21 @@ class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.handleUserLogin = this.handleUserLogin.bind(this);
+		this.state = ({
+			test: false
+		});
+	}
+	componentWillMount= () =>{
+		console.log('willmount');
+		this.setState({
+			test: true
+		})
+	}
+	componentWillReceiveProps= () =>{
+		console.log('reciever');
+		this.setState({
+			test: true
+		})
 	}
 	handleUserLogin = async () => {
 		const userName = document.getElementById('username').value;
@@ -25,6 +40,7 @@ class Login extends Component {
 		}
 	}
 	render() {
+		console.log('>>>>', this.state.test);
 		return (
 			<div className="container login-box">
 				<h3>Login to SocialApp</h3>
